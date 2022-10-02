@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import BaseLayout from '../layouts/BaseLayout';
-import Homepage from '../views/Homepage';
 import React from 'react';
-import TopScroll from '../components/TopScroll';
+import TopScroll from '../helpers/TopScroll';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 interface IRouteProps {
@@ -14,12 +13,7 @@ interface IRouteProps {
 }
 
 const appRoutes: IRouteProps[] = [
-	{
-		pathName: 'Home',
-		urlPath: '/',
-		Component: <Homepage />,
-		isNested: false,
-	},
+	
 ];
 
 const AppRouter = () => {
