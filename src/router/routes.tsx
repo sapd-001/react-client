@@ -6,11 +6,24 @@ import AdminSettings from '../views/Admin/AdminSettings';
 import AllAdmin from '../views/Admin/AllAdmin';
 import AllTasks from '../views/Admin/AllTasks';
 import CompletedTasks from '../views/Admin/CompletedTasks';
+import Departments from '../views/Admin/Departments';
+import Designations from '../views/Admin/Designations';
+import Employees from '../views/Admin/Employees';
 import Homepage from '../views/Homepage';
 import PendingTasks from '../views/Admin/PendingTasks';
 import React from 'react';
 import RejectedTasks from '../views/Admin/RejectedTasks';
 import Tasks from '../views/Admin/Tasks';
+import { IconDefinition, faDev } from '@fortawesome/free-brands-svg-icons';
+import {
+	faBriefcase,
+	faCogs,
+	faHome,
+	faPencil,
+	faUserCog,
+	faUserFriends
+} from '@fortawesome/free-solid-svg-icons';
+
 
 interface IRouteProps {
 	pathName: string;
@@ -18,6 +31,7 @@ interface IRouteProps {
 	Component: React.ReactElement;
 	isNested: boolean;
 	children?: IRouteProps[];
+	icon?: IconDefinition;
 }
 
 const appRoutes: IRouteProps[] = [
@@ -25,7 +39,8 @@ const appRoutes: IRouteProps[] = [
 		pathName: 'Home',
 		urlPath: '/',
 		Component: <Homepage />,
-		isNested: false
+		isNested: false,
+		icon: faHome
 	},
 	{
 		pathName: 'Admin',
@@ -34,22 +49,46 @@ const appRoutes: IRouteProps[] = [
 		isNested: true,
 		children: [
 			{
+				pathName: 'Departments',
+				urlPath: '/admin/departments',
+				Component: <Departments />,
+				isNested: false,
+				icon: faDev
+			},
+			{
+				pathName: 'Employees',
+				urlPath: '/admin/employees',
+				Component: <Employees />,
+				isNested: false,
+				icon: faUserFriends
+			},
+			{
+				pathName: 'Designations',
+				urlPath: '/admin/designations',
+				Component: <Designations />,
+				isNested: false,
+				icon: faBriefcase
+			},
+			{
 				pathName: 'Profile',
 				urlPath: '/admin',
 				Component: <AdminProfile />,
-				isNested: false
+				isNested: false,
+				icon: faUserCog
 			},
 			{
 				pathName: 'Settings',
 				urlPath: '/admin/settings',
 				Component: <AdminSettings />,
-				isNested: false
+				isNested: false,
+				icon: faCogs
 			},
 			{
 				pathName: 'Tasks',
 				urlPath: '/admin/tasks',
 				Component: <Tasks />,
 				isNested: true,
+                icon:faPencil,  
 				children: [
 					{
 						pathName: 'Completed',
@@ -86,7 +125,7 @@ const appRoutes: IRouteProps[] = [
 			{
 				Component: <AllAdmin />,
 				isNested: false,
-				pathName: 'All admin catch routes',
+				pathName: 'all-admin',
 				urlPath: '/admin/*'
 			}
 		]
