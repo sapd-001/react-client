@@ -1,4 +1,5 @@
 import {
+	faDashboard,
 	faHouse,
 	faPencilSquare,
 	faTasks,
@@ -8,6 +9,10 @@ import {
 export const navlinks = {
 	admin: [
 		{
+			pathName: 'Dashboard',
+			urlPath: '/admin/',
+			icon: faDashboard
+		},{
 			pathName: 'Tasks',
 			urlPath: '/admin/tasks',
 			icon: faTasks

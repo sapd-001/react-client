@@ -7,9 +7,7 @@ const AdminSidebar = () => {
 	return (
 		<div className="flex flex-col h-screen w-64 bg-black py-4 text-white sticky top-0">
 			<h2 className="text-2xl font-bold uppercase text-center">Admin</h2>
-			<div className="text-center font-bold text-black bg-slate-400 py-2">
-				Dashboard
-			</div>
+			<hr className='my-3'/>
 			<div>
 				{navlinks.admin.map((n) => (
 					<Link

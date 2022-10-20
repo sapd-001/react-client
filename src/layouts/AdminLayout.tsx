@@ -11,7 +11,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
 	return (
 		<div className="flex">
 			<AdminSidebar />
-			<div className=''>
+			<div className='w-full'>
 				<LayoutHeader />
 				<div className="min-h-screen">{children}</div>
 				<LayoutFooter />
