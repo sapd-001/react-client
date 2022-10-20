@@ -3,8 +3,8 @@
 import Homepage from '../views/Homepage';
 import { IconDefinition, faDev } from '@fortawesome/free-brands-svg-icons';
 
+import Admin from '../views/AdminPage';
 import React from 'react';
-
 
 interface IRouteProps {
 	pathName: string;
@@ -19,8 +19,15 @@ const appRoutes: IRouteProps[] = [
 		pathName: 'Home',
 		urlPath: '/',
 		Component: <Homepage />,
-		isNested: false,
+		isNested: false
 	},
+	{
+		Component: <Admin />,
+		isNested: true,
+		pathName: 'Admin',
+		urlPath: '/admin',
+		children: []
+	}
 ];
 
 export { appRoutes as RoutePaths };
