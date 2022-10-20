@@ -7,7 +7,7 @@ const Homepage = () => {
 			<img src={bg} alt="" className="absolute w-full h-full -z-[1]" />
 			<form
 				action=""
-				className="w-full max-w-[30rem] p-4 md:p-12 rounded-md shadow-md flex flex-col bg-slate-100  space-y-2"
+				className="w-full max-w-[30rem] p-4 md:p-12 rounded-md shadow-md flex flex-col bg-slate-100 gap-4"
 			>
 				<h1 className="text-2xl font-bold text-center my-6">
 					Welcome to Astra Employee Appraisal system
