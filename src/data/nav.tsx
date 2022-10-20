@@ -39,10 +39,10 @@ export const navlinks = {
 		},
 		{
 			pathName: 'Evaluator',
-			urlPath: 'admin/evaluators',
+			urlPath: '/admin/evaluators',
 			icon: faPencilSquare
 		},
-		{ pathName: 'Users', urlPath: 'admin/Users', icon: faUsers }
+		{ pathName: 'Users', urlPath: '/admin/Users', icon: faUsers }
 	]
 };
 
