@@ -1,8 +1,14 @@
 import React from 'react';
+import Table from '../components/Table';
 
 const AdminUsers = () => {
 	return (
-		<div>AdminUsers</div>
+		<div>
+			<h1>Users</h1>
+			<div>
+				<Table/>
+			</div>
+		</div>
 	);
 };
 
