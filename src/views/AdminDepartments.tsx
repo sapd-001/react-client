@@ -1,12 +1,40 @@
 import React from 'react';
-import Table from '../components/Table';
+import Table, { TableColumnProps } from '../components/Table';
+
+const cols: TableColumnProps[] = [
+	{
+		columnName: 'id',
+		id: 1,
+		title: '#'
+	},
+	{
+		columnName: 'id',
+		id: 1,
+		title: '#'
+	},
+	{
+		columnName: 'id',
+		id: 1,
+		title: '#'
+	},
+	{
+		columnName: 'id',
+		id: 1,
+		title: '#'
+	},
+	{
+		columnName: 'id',
+		id: 1,
+		title: '#'
+	}
+];
 
 const AdminDepartments = () => {
 	return (
 		<div>
 			<h1>Departements</h1>
 			<div>
-				<Table/>
+				<Table columns={cols} rows={[]} />
 			</div>
 		</div>
 	);

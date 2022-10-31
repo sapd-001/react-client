@@ -20,29 +20,32 @@ const AppRouter = () => {
 							children: MChildren
 						}) => {
 							return MIsNested ? (
-								<Route path={MUrlPath} element={MComponent}>
+								<Route path={MUrlPath} element={MComponent} key={MPathname}>
 									{MChildren?.map(
 										({
 											Component: C1Component,
 											isNested: C1IsNested,
 											urlPath: C1UrlPath,
-											children: C1Children
+											children: C1Children,
+											pathName:C1Pathname
 										}) => {
 											return C1IsNested ? (
 												<Route
 													path={C1UrlPath}
 													element={C1Component}
+													key={C1Pathname}
 												>
 													{C1Children?.map(
 														({
 															Component:
 																C2Component,
-															urlPath: C2UrlPath
+															urlPath: C2UrlPath,
+															pathName:C2pathName
 														}) => {
 															return (
 																<Route
 																	key={
-																		C2UrlPath
+																		C2pathName
 																	}
 																	path={
 																		C2UrlPath
@@ -59,6 +62,7 @@ const AppRouter = () => {
 												<Route
 													path={C1UrlPath}
 													element={C1Component}
+													key={C1Pathname}
 												/>
 											);
 										}
