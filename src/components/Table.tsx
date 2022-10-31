@@ -20,11 +20,10 @@ type Props = {
 	rows: RowProps[];
 };
 const Table = ({ columns, rows }: Props) => {
-	console.log('Rosw', rows);
 
 	return (
 		<div className="p-4">
-			<table className="w-full border-collapse border-2 shadow p-2 text-left overflow-x-scroll">
+			<table className="table-fixed w-full border-collapse border-2 shadow p-2 text-left overflow-x-scroll">
 				<thead>
 					<tr className="font-bold text-xl uppercase bg-slate-200">
 						{columns.map((c) => (
@@ -40,7 +39,7 @@ const Table = ({ columns, rows }: Props) => {
 				<tbody className="w-full text-xl font-medium">
 					{rows.map((data) => {
 						return (
-							<tr key={data.id} className="">
+							<tr key={data.id} className="even:bg-slate-100">
 								{columns.map((col) =>
 									col.element ? (
 										<td key={col.columnName + data.id} className="border px-4 py-4">
