@@ -24,7 +24,7 @@ const Table = ({ columns, rows }: Props) => {
 
 	return (
 		<div className="p-4">
-			<table className="w-full border-collapse border-2 shadow p-2 text-center overflow-x-scroll">
+			<table className="w-full border-collapse border-2 shadow p-2 text-left overflow-x-scroll">
 				<thead>
 					<tr className="font-bold text-xl uppercase bg-slate-200">
 						{columns.map((c) => (
