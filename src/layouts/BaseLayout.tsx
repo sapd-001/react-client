@@ -6,8 +6,8 @@ interface IBaseLayoutProps {
 
 const BaseLayout = ({ children }: IBaseLayoutProps) => {
 	return (
-		<div className="">
-			<div className="max-w-[1560px] mx-auto">{children}</div>;
+		<div className="bg-slate-100">
+			<div className="">{children}</div>;
 		</div>
 	);
 };

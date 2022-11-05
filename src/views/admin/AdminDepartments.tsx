@@ -1,5 +1,5 @@
 import React from 'react';
-import Table, { TableColumnProps } from '../components/Table';
+import Table, { TableColumnProps } from '../../components/Table';
 
 const cols: TableColumnProps[] = [
 	{

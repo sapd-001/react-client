@@ -1,4 +1,4 @@
-import AdminLayout from '../layouts/AdminLayout';
+import AdminLayout from '../../layouts/AdminLayout';
 import { Outlet } from 'react-router-dom';
 import React from 'react';
 

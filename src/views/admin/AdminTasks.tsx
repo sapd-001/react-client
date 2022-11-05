@@ -1,6 +1,6 @@
 import React from 'react';
-import StatusBadge from '../components/StatusBadge';
-import Table, { TableColumnProps } from '../components/Table';
+import StatusBadge from '../../components/StatusBadge';
+import Table, { TableColumnProps } from '../../components/Table';
 
 const AdminTasks = () => {
 	const cols: TableColumnProps[] = [

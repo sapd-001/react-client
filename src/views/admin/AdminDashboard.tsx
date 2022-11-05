@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import dashboardSummary from '../data/adminDashboardSummary';
+import dashboardSummary from '../../data/adminDashboardSummary';
 
 const AdminDashboard = () => {
 	return (

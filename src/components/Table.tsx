@@ -36,7 +36,7 @@ const Table = ({ columns, rows }: Props) => {
 						))}
 					</tr>
 				</thead>
-				<tbody className="w-full text-xl font-medium">
+				<tbody className="w-full text-xl">
 					{rows.map((data) => {
 						return (
 							<tr key={data.id} className="even:bg-slate-100">

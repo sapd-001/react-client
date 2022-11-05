@@ -1,6 +1,6 @@
-import PerformanceBadge from '../components/PerformanceBadge';
+import PerformanceBadge from '../../components/PerformanceBadge';
 import React from 'react';
-import Table, { TableColumnProps } from '../components/Table';
+import Table, { TableColumnProps } from '../../components/Table';
 const rows = [
 	{
 		id: 1,
