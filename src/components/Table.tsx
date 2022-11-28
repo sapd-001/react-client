@@ -25,7 +25,7 @@ const Table = ({ columns, rows }: Props) => {
 		<div className="p-4">
 			<table className="table-fixed w-full border-collapse border-2 shadow p-2 text-left overflow-x-scroll">
 				<thead>
-					<tr className="font-bold text-xl uppercase bg-slate-200">
+					<tr className="uppercase text-[12px] bg-slate-200">
 						{columns.map((c) => (
 							<th
 								key={c.title+c.id}
@@ -36,7 +36,7 @@ const Table = ({ columns, rows }: Props) => {
 						))}
 					</tr>
 				</thead>
-				<tbody className="w-full text-xl">
+				<tbody className="w-full text-[14px]">
 					{rows.map((data) => {
 						return (
 							<tr key={data.id} className="even:bg-slate-100">
